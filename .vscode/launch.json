@@ -2,14 +2,19 @@
   "version": "0.2.0",
   "compounds": [
     {
-      "name": "tutorial1Debugger",
-      "configurations": ["tutorial1", "tutorial1Renderer"],
+      "name": "tutorialDebugger_1",
+      "configurations": ["tutorial1", "tutorialRenderer_1"],
+      "stopAll": true
+    },
+    {
+      "name": "tutorialDebugger_2",
+      "configurations": ["tutorial2", "tutorialRenderer_2"],
       "stopAll": true
     }
   ],
   "configurations": [
     {
-      "name": "tutorial1Renderer",
+      "name": "tutorialRenderer_1",
       "port": 9222,
       "request": "attach",
       "type": "chrome",
@@ -23,6 +28,26 @@
       "runtimeExecutable": "${workspaceFolder}/tutorial1/node_modules/.bin/electron",
       "windows": {
         "runtimeExecutable": "${workspaceFolder}/tutorial1/node_modules/.bin/electron.cmd"
+      },
+      "args": [".", "--remote-debugging-port=9222"],
+      "outputCapture": "std",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "tutorialRenderer_2",
+      "port": 9222,
+      "request": "attach",
+      "type": "chrome",
+      "webRoot": "${workspaceFolder}/tutorial2"
+    },
+    {
+      "name": "tutorial2",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/tutorial2",
+      "runtimeExecutable": "${workspaceFolder}/tutorial2/node_modules/.bin/electron",
+      "windows": {
+        "runtimeExecutable": "${workspaceFolder}/tutorial2/node_modules/.bin/electron.cmd"
       },
       "args": [".", "--remote-debugging-port=9222"],
       "outputCapture": "std",
