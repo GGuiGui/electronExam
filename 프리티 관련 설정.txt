@@ -1,0 +1,34 @@
+.prettierrc 설정
+{
+  "printWidth": 100,            // 한 줄 최대 길이 (기본 80 → 100이 실무에선 보기 좋음)
+  "tabWidth": 2,                // 탭 당 2칸 들여쓰기 (JS/HTML 기준)
+  "useTabs": false,             // 스페이스 사용 (탭보다 일관성이 높음)
+  "semi": true,                 // 문장 끝에 세미콜론 붙이기
+  "singleQuote": true,          // 문자열을 ' ' 로 통일
+  "quoteProps": "as-needed",    // 객체 속성에 필요할 때만 따옴표
+  "jsxSingleQuote": false,      // JSX에서는 " " 사용 (리액트 컨벤션)
+  "trailingComma": "all",       // 가능한 곳에는 항상 쉼표 (Git diff 최소화)
+  "bracketSpacing": true,       // { foo: bar } 중괄호 안 공백
+  "bracketSameLine": false,     // JSX 닫는 꺾쇠 괄호는 새 줄로
+  "arrowParens": "always",      // 화살표 함수 매개변수 괄호 항상
+  "endOfLine": "lf",            // 개행문자(LF) — 윈도우/리눅스 호환성 유지
+  "htmlWhitespaceSensitivity": "ignore", // HTML 포맷팅 시 공백 덜 민감하게
+  "embeddedLanguageFormatting": "auto"   // JSX, HTML 내 script/style 자동 포맷
+}
+
+.vscode/setting.json 설정
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,            // 저장 시 자동 포맷
+  "prettier.requireConfig": true,         // .prettierrc 있는 프로젝트만 적용
+  "files.eol": "\n",                      // LF 고정
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[html]": {
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.formatOnSave": true
+  }
+}
