@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+    <title>input URL</title>
+  </head>
+  <body>
+    <input
+      id="input"
+      class="truncate"
+      type="search"
+      autocomplete="off"
+      spellcheck="false"
+      role="combobox"
+      aria-controls="matches"
+      aria-expanded="false"
+      aria-description=""
+      placeholder="오픈 URL 입력"
+      aria-live="polite"
+    />
+    <button>접속</button>
+  </body>
+  <script src="./js/renderer.js"></script>
+</html>

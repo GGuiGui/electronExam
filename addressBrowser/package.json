@@ -1,0 +1,15 @@
+{
+  "name": "addressbrowser",
+  "version": "1.0.0",
+  "description": "URL 입력 형식의 브라우저",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "최규범",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^39.0.0"
+  }
+}
