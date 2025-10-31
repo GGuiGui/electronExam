@@ -10,6 +10,11 @@
       "name": "tutorialDebugger_2",
       "configurations": ["tutorial2", "tutorialRenderer_2"],
       "stopAll": true
+    },
+    {
+      "name": "addressBrowserDebugger",
+      "configurations": ["addressBrowser", "addressBrowserRenderer"],
+      "stopAll": true
     }
   ],
   "configurations": [
@@ -48,6 +53,26 @@
       "runtimeExecutable": "${workspaceFolder}/tutorial2/node_modules/.bin/electron",
       "windows": {
         "runtimeExecutable": "${workspaceFolder}/tutorial2/node_modules/.bin/electron.cmd"
+      },
+      "args": [".", "--remote-debugging-port=9222"],
+      "outputCapture": "std",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "addressBrowser",
+      "port": 9222,
+      "request": "attach",
+      "type": "chrome",
+      "webRoot": "${workspaceFolder}/addressBrowser"
+    },
+    {
+      "name": "addressBrowserRenderer",
+      "type": "node",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/addressBrowser",
+      "runtimeExecutable": "${workspaceFolder}/addressBrowser/node_modules/.bin/electron",
+      "windows": {
+        "runtimeExecutable": "${workspaceFolder}/addressBrowser/node_modules/.bin/electron.cmd"
       },
       "args": [".", "--remote-debugging-port=9222"],
       "outputCapture": "std",
