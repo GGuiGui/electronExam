@@ -7,3 +7,6 @@
 
 2. tutorial2
    패키징 및 배포파일 만들기[forge]
+
+3. addressBrowser
+   일렉트로닉 유동적 URL 사용 가능여부 확인
